@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rast - Portfolio dan CV Pengembang Muda</title>
+    <!-- Memuat Tailwind CSS untuk styling modern dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Latar belakang yang sangat gelap (hitam) */
+            background-color: #121212; 
+        }
+        .card {
+            /* Warna latar belakang CV sekarang hitam gelap */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); 
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Gradient untuk Header yang lebih menarik (tetap terang di mode gelap) */
+        .header-gradient {
+            background-image: linear-gradient(135deg, #1f2937, #104e8b); /* Dark Blue to Navy */
+        }
+        .section-title {
+            /* Warna border kontras yang lebih cerah di mode gelap */
+            border-left: 5px solid #3b82f6; 
+            padding-left: 1rem;
+            font-weight: 800;
+            /* Judul bagian menjadi putih */
+            color: #ffffff; 
+        }
+        /* Menghilangkan bullet points dan menggantinya dengan ikon kustom */
+        ul.list-disc {
+            list-style-type: none; 
+            padding-left: 0;
+        }
+        ul.list-disc li {
+            padding-left: 1.75rem; 
+            position: relative;
+        }
+        ul.list-disc li::before {
+            content: '✓'; /* Ganti dengan tanda centang modern */
+            position: absolute;
+            left: 0;
+            color: #10b981; /* Warna hijau toska yang fresh */
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .icon {
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <!-- Kontainer utama sekarang menggunakan latar belakang gelap -->
+    <div id="cv-container" class="max-w-5xl mx-auto bg-gray-900 rounded-2xl card overflow-hidden">
+
+        <!-- HEADER & RINGKASAN PROFIL - Menggunakan Gradient -->
+        <header class="header-gradient text-white p-6 sm:p-12 text-center">
+            <div class="mb-4">
+                <!-- 
+                    CARA MENGGANTI FOTO:
+                    1. Upload foto Anda ke layanan hosting gambar (misal: Imgur atau GitHub).
+                    2. Dapatkan URL link langsung (direct link) dari foto tersebut.
+                    3. Ganti URL di dalam atribut 'src' di bawah ini dengan URL foto Anda.
+                -->
+                <img src="https://placehold.co/150x150/104e8b/ffffff?text=FOTO" alt="Foto Profil Rast" 
+                     class="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto border-4 border-blue-200 object-cover transform hover:scale-105 transition duration-300">
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-1 tracking-wider">Rast</h1>
+            <p class="text-blue-300 text-xl sm:text-2xl font-light mb-4">Aspiring Web Developer & AI Engineer</p>
+            
+            <p class="max-w-3xl mx-auto text-gray-200 text-base sm:text-lg leading-relaxed">
+                Siswa Sekolah Menengah Pertama (SMP) yang sangat termotivasi dan memiliki hasrat tinggi dalam teknologi. Fokus utama saat ini adalah mendalami fondasi Pengembangan Web dan konsep dasar Kecerdasan Buatan (AI). Aktif mencari dan membangun keterampilan praktis untuk karir profesional masa depan.
+            </p>
+
+            <div class="mt-8 flex justify-center space-x-6 text-sm sm:text-base font-medium">
+                <!-- Kontak -->
+                <a href="mailto:rastcihuy@gmail.com" class="flex items-center hover:text-blue-200 transition">
+                    <span class="icon">📧</span> rastcihuy@gmail.com
+                </a>
+                <span class="text-gray-400 hidden sm:inline">|</span>
+                <a href="#" class="flex items-center hover:text-blue-200 transition hidden sm:inline">
+                    <span class="icon">🔗</span> Sedang Menyiapkan Akun Profesional
+                </a>
+            </div>
+        </header>
+
+        <!-- KONTEN UTAMA CV -->
+        <main class="p-6 sm:p-12 grid gap-10">
+
+            <!-- BAGIAN 1: TENTANG SAYA -->
+            <section>
+                <h2 class="section-title text-2xl font-extrabold mb-6">Tentang Saya</h2>
+                <!-- Teks diubah menjadi lebih terang: text-gray-400 -->
+                <div class="space-y-4 text-gray-400">
+                    <p>
+                        Saya Rast, seorang siswa SMP yang percaya bahwa teknologi adalah masa depan dan cara terbaik untuk memecahkan masalah. Ketertarikan saya terletak pada dua bidang krusial: bagaimana kita membangun antarmuka pengguna yang efektif (Pengembangan Web) dan bagaimana kita memanfaatkan data untuk membuat keputusan cerdas (AI Engineering).
+                    </p>
+                    <p>
+                        Tujuan utama saya adalah menguasai keterampilan dasar seperti HTML, CSS, dan Python, serta mengaplikasikannya dalam proyek nyata. Saya siap untuk tantangan dan proses pembelajaran yang berkelanjutan.
+                    </p>
+                </div>
+            </section>
+
+            <!-- BAGIAN 5: KEAHLIAN (SKILL) -->
+            <section>
+                <h2 class="section-title text-2xl font-extrabold mb-6">Keahlian (Skills)</h2>
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <!-- Hard Skills Card: Latar belakang gelap, border kontras -->
+                    <div class="p-4 bg-gray-800 rounded-xl border border-gray-700">
+                        <!-- Judul dan ikon menjadi lebih terang: text-blue-400 -->
+                        <h3 class="flex items-center text-xl font-bold text-blue-400 mb-3">
+                            <!-- Icon Teknis (Gear) -->
+                            <svg class="icon text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Hard Skills (Teknis)
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag-tech">HTML (Dasar Kuat)</span>
+                            <span class="skill-tag-tech">CSS (Dasar Kuat)</span>
+                            <span class="skill-tag-tech">Python (Eksplorasi)</span>
+                            <span class="skill-tag-tech">Logika Pemrograman</span>
+                        </div>
+                    </div>
+                    <!-- Soft Skills Card: Latar belakang gelap, border kontras -->
+                    <div class="p-4 bg-gray-800 rounded-xl border border-gray-700">
+                        <!-- Judul dan ikon menjadi lebih terang: text-blue-400 -->
+                        <h3 class="flex items-center text-xl font-bold text-blue-400 mb-3">
+                            <!-- Icon Soft Skill (People) -->
+                            <svg class="icon text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2a3 3 0 015.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M12 10a4 4 0 110-8 4 4 0 010 8zm-2 9a4 4 0 014 0h-4z"></path></svg>
+                            Soft Skills (Pengembangan)
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag-soft">Problem Solving</span>
+                            <span class="skill-tag-soft">Critical Thinking</span>
+                            <span class="skill-tag-soft">Self-Learning (Belajar Mandiri)</span>
+                            <span class="skill-tag-soft">Adaptabilitas</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAGIAN 2: PENDIDIKAN -->
+            <section>
+                <h2 class="section-title text-2xl font-extrabold mb-6">Pendidikan</h2>
+                <!-- Latar belakang gelap, teks cerah -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="text-2xl font-bold text-white">Sekolah Menengah Pertama (SMP)</h3>
+                    <p class="text-blue-400 font-medium mt-1">SMP 01 Gandrungmangu</p>
+                    <p class="text-gray-400 text-sm mt-1">Periode: 2023 – 2026</p>
+                    <p class="text-base mt-3 text-gray-300">Fokus: Konsentrasi pada pelajaran Logika, Matematika, dan Ilmu Pengetahuan Alam sebagai landasan yang kuat untuk Computational Thinking.</p>
+                </div>
+            </section>
+
+            <!-- BAGIAN 3: PENGALAMAN & AKTIVITAS BELAJAR -->
+            <section>
+                <h2 class="section-title text-2xl font-extrabold mb-6">Pengalaman & Aktivitas Belajar</h2>
+                <div class="space-y-6">
+                    <!-- Aktivitas 1: Latar belakang gelap, border kontras -->
+                    <div class="p-4 rounded-xl border-2 border-gray-700 bg-gray-800 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-bold text-white">Fase Eksplorasi Pengembangan Web</h3>
+                        <p class="text-gray-400 italic mb-2">Self-Study Online</p>
+                        <!-- Teks list item menjadi lebih terang: text-gray-300 -->
+                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
+                            <li>Berhasil menyelesaikan modul dasar HTML dan CSS dari [Sebutkan Platform Belajar, cth: W3Schools/FreeCodeCamp].</li>
+                            <li>Memahami cara kerja struktur laman web, styling dasar, dan konsep responsif.</li>
+                        </ul>
+                    </div>
+                    <!-- Aktivitas 2: Latar belakang gelap, border kontras -->
+                    <div class="p-4 rounded-xl border-2 border-gray-700 bg-gray-800 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-bold text-white">Inisiasi Python & Kecerdasan Buatan (AI)</h3>
+                        <p class="text-gray-400 italic mb-2">Eksplorasi Mandiri</p>
+                        <!-- Teks list item menjadi lebih terang: text-gray-300 -->
+                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
+                            <li>Mempelajari sintaks dasar Python, termasuk variabel, loops, dan fungsi, sebagai persiapan untuk Pembelajaran Mesin.</li>
+                            <li>Aktif mencari roadmap dan sumber daya untuk keterampilan AI Engineer di masa depan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAGIAN 4: PORTOFOLIO & ROADMAP PROYEK -->
+            <section>
+                <h2 class="section-title text-2xl font-extrabold mb-6">Portofolio & Roadmap Proyek</h2>
+                <p class="text-gray-400 mb-6">Fokus saat ini adalah pembentukan dasar. Berikut adalah proyek yang sedang dikerjakan dan direncanakan untuk portofolio:</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Rencana Proyek 1: Website CV Ini (Blue accent) -->
+                    <div class="p-5 rounded-xl border-l-4 border-blue-500 bg-gray-800 transition duration-300 hover:bg-gray-700">
+                        <h3 class="font-bold text-xl text-blue-400">Proyek 1: Website CV Ini</h3>
+                        <p class="text-sm text-gray-400 mt-2">Tujuan: Menerapkan HTML dan CSS secara mandiri, menguasai layout responsif, dan hosting proyek pertama di GitHub Pages.</p>
+                        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 bg-blue-600 text-white rounded-full">Dalam Pengerjaan</span>
+                    </div>
+                    <!-- Rencana Proyek 2: Kalkulator Interaktif Web (Gray accent) -->
+                    <div class="p-5 rounded-xl border-l-4 border-gray-500 bg-gray-800 transition duration-300 hover:bg-gray-700">
+                        <h3 class="font-bold text-xl text-gray-200">Proyek 2: Kalkulator Interaktif Web</h3>
+                        <p class="text-sm text-gray-400 mt-2">Tujuan: Memahami JavaScript dan DOM Manipulation untuk membuat interaksi fungsional dan memperkuat dasar logika pemrograman.</p>
+                        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 bg-gray-600 text-white rounded-full">Direncakan</span>
+                    </div>
+                    <!-- Proyek Baru 3: The Program AI (Red accent) -->
+                    <div class="p-5 rounded-xl border-l-4 border-red-500 bg-gray-800 transition duration-300 hover:bg-gray-700">
+                        <h3 class="font-bold text-xl text-red-400">Proyek 3: AI "The Program"</h3>
+                        <p class="text-sm text-gray-400 mt-2">Tujuan: Pengembangan kecerdasan buatan pribadi, bernama The Program, yang direncanakan untuk diluncurkan dalam waktu dekat, berfokus pada aplikasi praktis Python.</p>
+                        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 bg-red-600 text-white rounded-full">Akan Diluncurkan</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-900 text-gray-400 text-center p-4 text-sm border-t border-gray-700">
+            <p>&copy; 2024 Rast. Dibuat dengan semangat belajar Pengembangan Web. | Kontak: rastcihuy@gmail.com</p>
+        </footer>
+
+    </div>
+
+    <!-- Script untuk styling tag skill disesuaikan untuk Dark Mode -->
+    <script>
+        // Styling untuk Hard Skills (Tech) - Diubah menjadi skema warna gelap
+        document.querySelectorAll('.skill-tag-tech').forEach(tag => {
+            tag.classList.add('px-3', 'py-1', 'bg-green-900', 'text-green-400', 'text-sm', 'font-medium', 'rounded-full', 'transition', 'hover:bg-green-800');
+        });
+        // Styling untuk Soft Skills (People) - Diubah menjadi skema warna gelap
+        document.querySelectorAll('.skill-tag-soft').forEach(tag => {
+            tag.classList.add('px-3', 'py-1', 'bg-yellow-900', 'text-yellow-400', 'text-sm', 'font-medium', 'rounded-full', 'transition', 'hover:bg-yellow-800');
+        });
+    </script>
+</body>
+</html>
